@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Unit5isEven {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int number = 0;
+		boolean result = isEven(number);
+		System.out.println("Enter an integer to determine if it is even or not.");
+		System.out.println("Enter 0 to exit.");
+		number = input.nextInt();
+		
+		while (number != 0) {
+			if (result == true)
+				System.out.printf("%d is even.\n", number);
+			else
+				System.out.printf("%d is odd.\n", number);
+			
+			System.out.println("Enter an integer to determine if it is even or not.");
+			System.out.println("Enter 0 to exit.");
+			number = input.nextInt();
+		}
+	}
+	
+	public static boolean isEven (int num) {
+		boolean result;
+		if (num % 2 == 0)
+			result = true;
+		else
+			result = false;
+		return result;
+	}
+}
